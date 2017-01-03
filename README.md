@@ -16,7 +16,7 @@ Ensure you have docker installed (curl -sSL https://get.docker.com/ | sh).
 ## Solo dev AWS Setup
 ```
 1. Set the variables in solo/solo.sh  as required
-2. Clone this repo onto the etcd instance and cd into it
+2. Clone this repo onto the etcd instance and cd into the solo folder
 3. Put all TLS files (e.g. ca.pem, etcd-key.pem, etcd.pem) into certs directory
 4. Run solo.sh on instance
 5. Run check.sh to check the state of the etcd instance
