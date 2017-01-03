@@ -4,7 +4,9 @@ hostip=$(curl -s http://169.254.169.254/latest/meta-data/local-ipv4)
 etcd0=172.31.26.54
 
 docker rm -f etcd
-docker run -d -p 4001:4001 -p 2380:2380 -p 2379:2379 \
+docker run -d \
+ -v $PWD/certs:/etc/ssl/certs \
+ -p 4001:4001 -p 2380:2380 -p 2379:2379 \
  --name etcd quay.io/coreos/etcd etcd \
  -name etcd0 \
  -advertise-client-urls http://${hostip}:2379,http://${hostip}:4001 \

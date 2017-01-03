@@ -4,14 +4,24 @@ Ensure all steps are run as root.
 
 Ensure you have docker installed (curl -sSL https://get.docker.com/ | sh).
 
-## Cluster Setup:
+## AWS Cluster Setup:
 ```
 1. Set the variables in variables.sh as required
-2. Clone this repo onto each etcd instance
-3. Put all TLS files (e.g. ca.pem, etcd-key.pem, etcd.pem) into Certs directory
+2. Clone this repo onto each etcd instance and cd into them
+3. Put all TLS files (e.g. ca.pem, etcd-key.pem, etcd.pem) into certs directory
 4. Run etcd0.sh on first instance, etcd1.sh on 2nd instance and etcd2.sh on third instance.
 5. Run check.sh to check the state of the cluster
 ```
+
+## Solo dev AWS Setup
+```
+1. Set the variables in solo/solo.sh  as required
+2. Clone this repo onto the etcd instance and cd into it
+3. Put all TLS files (e.g. ca.pem, etcd-key.pem, etcd.pem) into certs directory
+4. Run solo.sh on instance
+5. Run check.sh to check the state of the etcd instance
+```
+
 
 ### Notes 
 
